@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
 import requests from "../request";
+import './css/Banner.css'
 
 function Banner({}) {
   const [movies, setMovies] = useState([]);
@@ -25,33 +26,31 @@ function Banner({}) {
     fetchData();
   }, []);
 
-  console.log(movies); 
+  console.log(movies);
 
   // ?. -> verifica se é nulo ou nao se for nulo nao buga tudo
   return (
-    <header className="banner"
-    style={{
+    <header
+      className="banner"
+      style={{
         backgroundSize: "cover",
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies?.backdrop_path}")`,
         backgroundPosition: "center center",
-    }}
+      }}
     >
-
       <div className="banner__contents">
-
         {/* tittle */}
-        <h1>{movies?.title || movies?.name || movies?.original_name}</h1>
-        
+        <h1 className="banner__title">{movies?.title || movies?.name || movies?.original_name}</h1>
+
         {/* div -> 2 button */}
         <div className="banner__buttons">
-            <button className="banner__button">Play</button>
-            <button className="banner__button">My List</button>
+          <button className="banner__button">Play</button>
+          <button className="banner__button">My List</button>
         </div>
-        
+
         {/* description */}
         <h1 className="banner__description">{movies?.overview}</h1>
       </div>
-
     </header>
   );
 }
