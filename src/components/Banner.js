@@ -25,11 +25,33 @@ function Banner({}) {
     fetchData();
   }, []);
 
+  console.log(movies); 
+
+  // ?. -> verifica se é nulo ou nao se for nulo nao buga tudo
   return (
-    <header>
-      {/* tittle */}
-      {/* div -> 2 button */}
-      {/* description */}
+    <header className="banner"
+    style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies?.backdrop_path}")`,
+        backgroundPosition: "center center",
+    }}
+    >
+
+      <div className="banner__contents">
+
+        {/* tittle */}
+        <h1>{movies?.title || movies?.name || movies?.original_name}</h1>
+        
+        {/* div -> 2 button */}
+        <div className="banner__buttons">
+            <button className="banner__button">Play</button>
+            <button className="banner__button">My List</button>
+        </div>
+        
+        {/* description */}
+        <h1 className="banner__description">{movies?.overview}</h1>
+      </div>
+
     </header>
   );
 }
