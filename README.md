@@ -16,3 +16,7 @@ You can download my project and run with these steps.
     <li>movie-trailer</li>
     <li>firebase</li>
 </ul>
+
+## API
+
+The movie DB: https://www.themoviedb.org/?language=pt-BR
