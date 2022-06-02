@@ -1,0 +1,36 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    height: 30px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+
+    /* animation */
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.nav__black {
+    background-color: #111;
+}
+
+.nav__logo {
+    position: fixed;
+    left: 0;
+    width: 88px;
+    object-fit: contain;
+}
+
+/* The CSS object-fit property is used to specify how an <img> or <video>
+should be resized to fit its container. */
+.nav__avatar{
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    object-fit: contain;
+}
