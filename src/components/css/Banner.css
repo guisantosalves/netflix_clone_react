@@ -46,7 +46,13 @@
     transition: all 0.2s;
 }
 
+/* here we can use 180deg and to bottom they are gonna be the same result  */
 .banner__fadeBottom{
     height: 7.4rem;
-    border: 1px solid red;
+    background-image: linear-gradient(
+        to bottom, 
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
 }
